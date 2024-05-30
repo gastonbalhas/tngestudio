@@ -71,3 +71,22 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.brand-center {
+  flex: 1;
+  text-align: center;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-brand {
+  margin-right: auto; /* Alinea el Navbar Brand a la izquierda */
+}

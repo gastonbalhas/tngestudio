@@ -40,13 +40,13 @@ function Navbar() {
         <div className={`collapse navbar-collapse justify-content-center ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item mx-3">
-              <button className="nav-link text-white" onClick={() => scrollToSection('marcas')}>
-                Contenido para Empresas
+              <button className="nav-link text-white" onClick={() => scrollToSection('artistas')}>
+                Videos para Artistas
               </button>
             </li>
             <li className="nav-item mx-3">
-              <button className="nav-link text-white" onClick={() => scrollToSection('artistas')}>
-                Videos para Artistas
+              <button className="nav-link text-white" onClick={() => scrollToSection('marcas')}>
+                Contenido para Empresas
               </button>
             </li>
             <li className="nav-item mx-3">

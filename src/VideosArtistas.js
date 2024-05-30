@@ -6,8 +6,9 @@ function VideosParaArtistas() {
       <div className="container mt-5">
         <h1 className="display-4 text-center">Videos para Artistas</h1>
         <hr className="my-4" />
-        <p>
-          Ofrecemos servicios de producción de video de alta calidad para artistas. Ya sea que necesites videoclips, filmación de shows en vivo o sesiones en estudio, estamos aquí para capturar y realzar tu talento.
+        <p style={{ fontSize: '0.8rem', textAlign: 'center' }}>
+          Ofrecemos servicios de producción de video de alta calidad para artistas.<br />
+          Ya sea que necesites videoclips, filmación de shows en vivo o sesiones en estudio.
         </p>
 
         {/* Agregar las tarjetas con videos */}
@@ -27,7 +28,7 @@ function VideosParaArtistas() {
               ></iframe>
               <div className="card-body text-center">
                 <h5 className="card-title text-center">Video Clips</h5>
-                <p className="card-text text-center">Producción de videoclips.</p>
+                <p className="card-text text-center" style={{ fontSize: '0.7rem' }}>Producción de videoclips.</p>
               </div>
             </div>
           </div>
@@ -46,7 +47,7 @@ function VideosParaArtistas() {
               ></iframe>
               <div className="card-body text-center">
                 <h5 className="card-title text-center">Videos en Vivo</h5>
-                <p className="card-text text-center">Filmación y edición de shows en vivo.</p>
+                <p className="card-text text-center" style={{ fontSize: '0.7rem' }}>Filmación y edición de shows en vivo.</p>
               </div>
             </div>
           </div>
@@ -65,7 +66,7 @@ function VideosParaArtistas() {
               ></iframe>
               <div className="card-body text-center">
                 <h5 className="card-title text-center">Live Sessions</h5>
-                <p className="card-text text-center">Grabaciones y filmación de sesiones en vivo, en estudio o exterior. Contamos con estudio móvil.</p>
+                <p className="card-text text-center" style={{ fontSize: '0.7rem' }}>Grabaciones y filmación de sesiones en vivo, en estudio o exterior. Contamos con estudio móvil.</p>
               </div>
             </div>
           </div>
