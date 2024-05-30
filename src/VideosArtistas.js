@@ -4,9 +4,9 @@ function VideosParaArtistas() {
   return (
     <section id="artistas" className="custom-dark text-white py-5">
       <div className="container mt-5">
-        <h1 className="display-4 text-center">Videos para Artistas</h1>
-        <hr className="my-4" />
-        <p style={{ fontSize: '0.8rem', textAlign: 'center' }}>
+        <hr className="my-4" /> {/* Línea colocada antes del título */}
+        <h1 className="display-4 text-center">Videos para Artistas</h1> {/* Título */}
+        <p style={{ fontSize: '0.8rem', textAlign: 'center', marginBottom: '20px' }}> {/* Margen agregado */}
           Ofrecemos servicios de producción de video de alta calidad para artistas.<br />
           Ya sea que necesites videoclips, filmación de shows en vivo o sesiones en estudio.
         </p>
