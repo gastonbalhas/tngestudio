@@ -1,6 +1,8 @@
 /* Aquí importa Bootstrap primero */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 /* Luego, aplica tus estilos personalizados */
 body {
   background-color: black;

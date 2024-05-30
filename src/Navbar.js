@@ -20,8 +20,11 @@ function Navbar() {
   };
 
   return (
-    <nav className={`navbar navbar-dark bg-dark navbar-expand-lg fixed-top ${isNavOpen ? 'mobile-navbar' : ''}`}>
+    <nav className="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
       <div className="container mx-auto flex justify-between items-center">
+        <a className="navbar-brand d-lg-block text-lg-end" href="/">
+          <img src="./logos/Transparente_LBlanca.png" alt="Logo" width="80" className="d-inline-block align-text-top" />
+        </a>
         <button
           className={`navbar-toggler ${isNavOpen ? 'collapsed' : ''}`}
           type="button"
@@ -34,9 +37,6 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="/">
-          <img src="./logos/Transparente_LBlanca.png" alt="Logo" width="80" className="d-inline-block align-text-top" />
-        </a>
         <div className={`collapse navbar-collapse justify-content-center ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item mx-3">
