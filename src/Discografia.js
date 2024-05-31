@@ -2,10 +2,10 @@ import React from 'react';
 
 function Spotify() {
   return (
-    <section id="discografia" className="custom-dark text-white py-5 text-aling text-center">
+    <section id="discografia" className="custom-dark text-white py-4 text-center">
       <div className="container">
-        <h1 className="display-4">Mezclado en TNG Estudio</h1> {/* Cambiado de "Mezcla y Mastering" a "Contenido para Empresas" */}
         <hr className="my-4" />
+        <h1 className="display-6 mb-4">Mezclado en TNG Estudio</h1> {/* Cambiado de "Mezcla y Mastering" a "Contenido para Empresas" */}
         <iframe
           title="Spotify Player"
           style={{ borderRadius: '12px' }}
