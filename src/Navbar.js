@@ -1,36 +1,25 @@
+// NavbarFotos.js
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
 
-function Navbar() {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+function NavbarFotos() {
   const sections = [
-    { id: 'videos-artistas', label: 'Videos para Artistas' },
-    { id: 'videos-empresas', label: 'Videos para Empresas' },
-    { id: 'grabacion', label: 'Grabacion' },
-    { id: 'mezcla-mastering', label: 'Mezcla y Mastering' },
-    { id: 'contacto', label: 'Contactanos' },
+    { id: 'artistas', label: 'Videos para Artistas', imgSrc: '/img/Boton1VideosParaArtistas.jpg' },
+    { id: 'marcas', label: 'Videos para Empresas', imgSrc: '/img/Boton2VideosParaEmpresas.jpg' },
+    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion.jpg' },
+    { id: 'discografia', label: 'Mezcla y Mastering', imgSrc: '/img/Boton4Mezcla.jpg' },
+    { id: 'contacto', label: 'Contactanos', imgSrc: '/img/Boton5Contactanos.jpg' },
   ];
 
-  return (
-    <Row className="m-0">
-      {sections.map((section) => (
-        <Col xs={12} md={4} lg={2} className="p-0" key={section.id}>
-          <button
-            className="nav-button w-100 h-100 position-relative"
-            onClick={() => scrollToSection(section.id)}
-          >
-            <h3 className="text-center">{section.label}</h3>
-          </button>
-        </Col>
-      ))}
-    </Row>
-  );
+  const containerStyle = {
+    display: 'flex',
+    width: '100%',
+    height: '600px',
+    margin: 0,
+    padding: 0,
+    justifyContent: 'space-around', // Ajuste para espaciar los botones
+  };
+
+  // Resto del código del NavbarFotos
 }
 
-export default Navbar;
+export default NavbarFotos;

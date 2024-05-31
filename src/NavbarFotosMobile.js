@@ -1,28 +1,26 @@
-// NavbarFotos.js
+// NavbarFotosMobile.js
 import React from 'react';
 
-function NavbarFotos() {
+function NavbarFotosMobile() {
   const sections = [
     { id: 'artistas', label: 'Videos para Artistas', imgSrc: '/img/Boton1VideosParaArtistas.jpg' },
     { id: 'marcas', label: 'Videos para Empresas', imgSrc: '/img/Boton2VideosParaEmpresas.jpg' },
-    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion.jpg' },
+    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion2.jpg' },
     { id: 'discografia', label: 'Mezcla y Mastering', imgSrc: '/img/Boton4Mezcla.jpg' },
     { id: 'contacto', label: 'Contactanos', imgSrc: '/img/Boton5Contactanos.jpg' },
   ];
 
   const containerStyle = {
     display: 'flex',
-    width: '100vw',
-    height: '600px',
-    margin: 0,
-    padding: 0,
+    flexWrap: 'wrap',
+    justifyContent: 'center', // Ajuste para centrar los botones
+    padding: '10px',
+    width: '100%',
   };
 
   const buttonStyle = {
-    flex: 1,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: 'calc(50% - 5px)', // Para que cada botón tenga el ancho de la mitad de la pantalla con espacio entre ellos
+    marginBottom: '10px',
     cursor: 'pointer',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -32,6 +30,7 @@ function NavbarFotos() {
     transition: 'transform 0.2s, opacity 0.2s',
     overflow: 'hidden',
     borderRadius: '10px',
+    height: '200px',
   };
 
   const h3Style = {
@@ -73,11 +72,15 @@ function NavbarFotos() {
 
   return (
     <div style={containerStyle}>
-      {sections.map((section) => (
+      {sections.slice(0, 4).map((section, index) => (
         <button
           key={section.id}
-          className="navbar-button"
-          style={{ ...buttonStyle, backgroundImage: `url(${section.imgSrc})` }}
+          className="navbar-button-mobile" // Cambia la clase aquí
+          style={{
+            ...buttonStyle,
+            backgroundImage: `url(${section.imgSrc})`,
+            transitionDelay: `${0.1 * index}s`, // Agregar retardo de transición
+          }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick(section.id)}
@@ -86,8 +89,24 @@ function NavbarFotos() {
           <h3 style={h3Style}>{section.label}</h3>
         </button>
       ))}
+      <button // El último botón como rectángulo
+        key={sections[4].id}
+        className="navbar-button-mobile" // Cambia la clase aquí
+        style={{
+          ...buttonStyle,
+          width: '100%', // Ajustar ancho al 100%
+          backgroundImage: `url(${sections[4].imgSrc})`,
+          transitionDelay: `${0.1 * sections.length}s`, // Agregar retardo de transición
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={() => handleClick(sections[4].id)}
+      >
+        <div className="overlay" style={overlayDefaultStyle}></div>
+        <h3 style={h3Style}>{sections[4].label}</h3>
+      </button>
     </div>
   );
 }
 
-export default NavbarFotos;
+export default NavbarFotosMobile;
