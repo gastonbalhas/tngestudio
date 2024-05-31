@@ -2,9 +2,9 @@ import React from 'react';
 
 function ContenidoParaArtistas() {
   const videos = [
-    { id: 'videoclips', label: 'Videoclips', videoSrc: 'videos/TNG_VideoClips01 4K.mp4' },
-    { id: 'videos-en-vivo', label: 'Videos en Vivo', videoSrc: 'videos/TNG_Vivo01 4k.mp4' },
-    { id: 'live-sessions', label: 'Live Sessions', videoSrc: 'videos/TNG_Live01 4K.mp4' },
+    { id: 'videoclips', label: 'Videoclips', videoSrc: '/videos/720Videoclips.mp4' },
+    { id: 'videos-en-vivo', label: 'Videos en Vivo', videoSrc: '/videos/720VideosEnVivo.mp4' },
+    { id: 'live-sessions', label: 'Live Sessions', videoSrc: '/videos/720LiveSessions.mp4' },
   ];
 
   const containerStyle = {
@@ -21,23 +21,6 @@ function ContenidoParaArtistas() {
     height: '169px', // Relación de aspecto 16:9 (calculada a partir del ancho)
     borderRadius: '10px',
     overflow: 'hidden',
-  };
-
-  const h3Style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    margin: 0,
-    padding: '5px',
-    zIndex: 1,
-    color: 'white',
-    fontFamily: 'inherit', // Usar la misma familia de fuentes que Bootstrap
-    fontWeight: 'lighter', // Asegurarse de que sea delgada
-    fontSize: '1.25rem', // Tamaño de fuente un poco más pequeño
-    textShadow: '0 0 5px rgba(0, 0, 0, 0.5)', // Mantener el texto legible
-    textAlign: 'center', // Centrar el texto horizontalmente
-    width: '100%', // Asegurarse de que el texto ocupe todo el ancho del contenedor
   };
 
   return (
@@ -65,7 +48,6 @@ function ContenidoParaArtistas() {
                 playsInline
                 style={{ objectFit: 'cover' }}
               />
-              <h3 style={h3Style}>{video.label}</h3>
             </div>
           ))}
         </div>

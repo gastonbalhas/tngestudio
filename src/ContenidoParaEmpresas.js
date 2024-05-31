@@ -2,9 +2,9 @@ import React from 'react';
 
 function ContenidoParaEmpresas() {
   const videos = [
-    { id: 'institucionales', label: 'Videos Institucionales para Marcas', videoSrc: 'videos/V1080Institucionales.mp4' },
-    { id: 'cursos', label: 'Filmación y Edición de Cursos', videoSrc: 'videos/V1080Cursos.mp4' },
-    { id: 'redes-sociales', label: 'Contenido para Redes Sociales', videoSrc: 'videos/ContenidoRedes.mp4' },
+    { id: 'institucionales', label: 'Videos Institucionales para Marcas', videoSrc: '/videos/720Marcas.mp4' },
+    { id: 'cursos', label: 'Filmación y Edición de Cursos', videoSrc: '/videos/720Cursos.mp4' },
+    { id: 'productos', label: 'Contenido para Redes Sociales', videoSrc: '/videos/720Productos.mp4' },
   ];
 
   const containerStyle = {
@@ -21,23 +21,6 @@ function ContenidoParaEmpresas() {
     height: '169px', // Relación de aspecto 16:9 (calculada a partir del ancho)
     borderRadius: '10px',
     overflow: 'hidden',
-  };
-
-  const h3Style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    margin: 0,
-    padding: '5px',
-    zIndex: 1,
-    color: 'white',
-    fontFamily: 'inherit', // Usar la misma familia de fuentes que Bootstrap
-    fontWeight: 'lighter', // Asegurarse de que sea delgada
-    fontSize: '1.25rem', // Tamaño de fuente un poco más pequeño
-    textShadow: '0 0 5px rgba(0, 0, 0, 0.5)', // Mantener el texto legible
-    textAlign: 'center', // Centrar el texto horizontalmente
-    width: '100%', // Asegurarse de que el texto ocupe todo el ancho del contenedor
   };
 
   return (
@@ -65,7 +48,6 @@ function ContenidoParaEmpresas() {
                 playsInline
                 style={{ objectFit: 'cover' }}
               />
-              <h3 style={h3Style}>{video.label}</h3>
             </div>
           ))}
         </div>
