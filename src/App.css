@@ -1,8 +1,6 @@
 /* Aquí importa Bootstrap primero */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 /* Luego, aplica tus estilos personalizados */
 body {
   background-color: black;
@@ -44,28 +42,13 @@ body {
 }
 
 /* Estilos para las tarjetas horizontales */
-.horizontal-card .video-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* Proporción de aspecto 16:9 */
-}
-
-.horizontal-card .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Estilos para las tarjetas verticales */
-/* Estilos para las tarjetas verticales */
+.horizontal-card .video-container,
 .vertical-card .video-container {
   position: relative;
   width: 100%;
-  padding-top: 177.77%; /* Proporción de aspecto 9:16 */
 }
 
+.horizontal-card .video-container iframe,
 .vertical-card .video-container iframe {
   position: absolute;
   top: 0;
@@ -89,43 +72,9 @@ body {
   margin-left: auto;
 }
 
-
 .navbar-brand {
   margin-right: auto; /* Alinea el Navbar Brand a la izquierda */
 }
-.nav-button {
-  background-size: cover;
-  background-position: center;
-  height: 400px; /* Ajusta la altura según sea necesario */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
-.nav-button h3 {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@media (max-width: 767px) {
-  .nav-button {
-    height: 200px; /* Ajusta la altura para dispositivos móviles */
-  }
-}
-
-.row.m-0 {
-  margin-right: 0;
-  margin-left: 0;
-  width: 100%; /* Asegúrate de que la fila ocupe todo el ancho del contenedor */
-}
-
 
 .nav-button {
   border: 2px solid red; /* Borde para visualizar el espacio ocupado */
@@ -148,20 +97,29 @@ body {
   width: 100%; /* Asegúrate de que la fila ocupe todo el ancho del contenedor */
 }
 
-/* cambios para mobile */
+/* Cambios para dispositivos móviles */
+@media (max-width: 767px) {
+  .nav-button {
+    height: 200px; /* Ajusta la altura para dispositivos móviles */
+  }
+}
 
-/* Tu otro CSS aquí */
-
-/* Estilos para dispositivos con una anchura máxima de 768px (como dispositivos móviles) */
+/* Cambios para dispositivos con una anchura máxima de 768px (como dispositivos móviles) */
 @media (max-width: 768px) {
   .navbar-fotos {
     display: none; /* Ocultar el Navbar de escritorio en dispositivos móviles */
   }
 }
 
-/* Estilos para dispositivos con una anchura mínima de 769px (como dispositivos de escritorio) */
+/* Cambios para dispositivos con una anchura mínima de 769px (como dispositivos de escritorio) */
 @media (min-width: 769px) {
   .navbar-fotos-mobile {
     display: none; /* Ocultar el Navbar móvil en dispositivos de escritorio */
   }
+}
+
+/* Estilos CSS */
+.custom-button-label {
+  font-family: 'Montserrat', sans-serif; /* Aplicar Montserrat Thin */
+  font-weight: 100; /* Peso de la fuente */
 }

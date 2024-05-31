@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import NavbarFotos from './NavbarFotos';
 import NavbarFotosMobile from './NavbarFotosMobile';
+import Brand from './Brand';
 import ContenidoParaEmpresas from './ContenidoParaEmpresas';
 import ContenidoParaArtistas from './ContenidoParaArtistas';
 import Discografia from './Discografia';
@@ -27,6 +28,7 @@ function App() {
   return (
     <div>
       {isMobile ? <NavbarFotosMobile /> : <NavbarFotos />}
+      <Brand/>
       <ContenidoParaArtistas />
       <ContenidoParaEmpresas />
       <Discografia />

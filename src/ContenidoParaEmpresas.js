@@ -17,14 +17,21 @@ function ContenidoParaEmpresas() {
 
   const videoStyle = {
     position: 'relative',
-    width: '300px', // Ancho ajustado a tu preferencia
-    height: '169px', // Relación de aspecto 16:9 (calculada a partir del ancho)
+    width: '400px', // Ancho ajustado a tu preferencia
+    height: '225px', // Relación de aspecto 16:9 (calculada a partir del ancho)
+    borderRadius: '10px',
+    overflow: 'hidden',
+  };
+
+  const mobileVideoStyle = {
+    width: '100%', // Ajuste de ancho completo para dispositivos móviles
+    height: 'auto', // Mantener la relación de aspecto
     borderRadius: '10px',
     overflow: 'hidden',
   };
 
   return (
-    <section id="marcas" className="custom-dark text-white py-5">
+    <section id="marcas" className="custom-dark text-white py-2">
       <div className="container mt-5">
         <hr className="my-4" /> {/* Línea colocada antes del título */}
         <h1 className="display-4 text-center" style={{ fontSize: '2rem', fontWeight: 'lighter' }}> {/* Asegurarse de que el título principal sea delgado */}
@@ -37,7 +44,7 @@ function ContenidoParaEmpresas() {
 
         <div style={containerStyle}>
           {videos.map((video) => (
-            <div key={video.id} style={videoStyle}>
+            <div key={video.id} style={videoStyle} className="video-container">
               <video
                 width="100%"
                 height="100%"
@@ -52,6 +59,18 @@ function ContenidoParaEmpresas() {
           ))}
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .video-container {
+            width: 100% !important;
+            height: auto !important;
+          }
+          .video-container video {
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,13 +1,12 @@
-// NavbarFotos.js
 import React from 'react';
 
 function NavbarFotos() {
   const sections = [
-    { id: 'artistas', label: 'Videos para Artistas', imgSrc: '/img/Boton1VideosParaArtistas.jpg' },
-    { id: 'marcas', label: 'Videos para Empresas', imgSrc: '/img/Boton2VideosParaEmpresas.jpg' },
-    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion.jpg' },
-    { id: 'discografia', label: 'Mezcla y Mastering', imgSrc: '/img/Boton4Mezcla.jpg' },
-    { id: 'contacto', label: 'Contactanos', imgSrc: '/img/Boton5Contactanos.jpg' },
+    { id: 'artistas', label: 'Videos para Artistas', imgSrc: '/img/Boton1VideosParaArtistas.webp' },
+    { id: 'marcas', label: 'Videos para Empresas', imgSrc: '/img/Boton2VideosParaEmpresas.webp' },
+    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion.webp' },
+    { id: 'discografia', label: 'Mezcla y Mastering', imgSrc: '/img/Boton4Mezcla.webp' },
+    { id: 'contacto', label: 'Contactanos', imgSrc: '/img/Boton5Contactanos.webp' },
   ];
 
   const containerStyle = {
@@ -83,7 +82,7 @@ function NavbarFotos() {
           onClick={() => handleClick(section.id)}
         >
           <div className="overlay" style={overlayDefaultStyle}></div>
-          <h3 style={h3Style}>{section.label}</h3>
+          <h3 className="custom-button-label" style={h3Style}>{section.label}</h3> {/* Aquí se agrega la clase y el estilo */}
         </button>
       ))}
     </div>
@@ -91,3 +90,4 @@ function NavbarFotos() {
 }
 
 export default NavbarFotos;
+

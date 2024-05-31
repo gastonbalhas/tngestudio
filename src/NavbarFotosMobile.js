@@ -1,13 +1,12 @@
-// NavbarFotosMobile.js
 import React from 'react';
 
 function NavbarFotosMobile() {
   const sections = [
-    { id: 'artistas', label: 'Videos para Artistas', imgSrc: '/img/Boton1VideosParaArtistas.jpg' },
-    { id: 'marcas', label: 'Videos para Empresas', imgSrc: '/img/Boton2VideosParaEmpresas.jpg' },
-    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion2.jpg' },
-    { id: 'discografia', label: 'Mezcla y Mastering', imgSrc: '/img/Boton4Mezcla.jpg' },
-    { id: 'contacto', label: 'Contactanos', imgSrc: '/img/Boton5Contactanos.jpg' },
+    { id: 'artistas', label: 'Videos para Artistas', imgSrc: '/img/Boton1VideosParaArtistas.webp' },
+    { id: 'marcas', label: 'Videos para Empresas', imgSrc: '/img/Boton2VideosParaEmpresas.webp' },
+    { id: 'grabacion', label: 'Grabaciones', imgSrc: '/img/Boton3Grabacion.webp' },
+    { id: 'discografia', label: 'Mezcla y Mastering', imgSrc: '/img/Boton4Mezcla.webp' },
+    { id: 'contacto', label: 'Contactanos', imgSrc: '/img/Boton5Contactanos.webp' },
   ];
 
   const containerStyle = {
@@ -30,7 +29,7 @@ function NavbarFotosMobile() {
     transition: 'transform 0.2s, opacity 0.2s',
     overflow: 'hidden',
     borderRadius: '10px',
-    height: '200px',
+    height: '100px', // Reducir la altura de los botones a la mitad
   };
 
   const h3Style = {
@@ -39,6 +38,8 @@ function NavbarFotosMobile() {
     position: 'relative',
     zIndex: 1,
     textShadow: '0 0 5px rgba(0, 0, 0, 0.5)',
+    fontFamily: 'Montserrat, sans-serif', // Aplicar la fuente Montserrat
+    fontWeight: 'thin', // Aplicar el peso de la fuente thin
   };
 
   const overlayDefaultStyle = {
