@@ -1,16 +1,17 @@
 import React from 'react';
-import Header from './Header';
+import NavbarFotos from './NavbarFotos';
 import ContenidoParaEmpresas from './ContenidoParaEmpresas';
 import ContenidoParaArtistas from './ContenidoParaArtistas'; // Actualizado
 import Discografia from './Discografia'; // Actualizado
 import Footer from './Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
 function App() {
   return (
-    <div className='App-header'>
-      <Header />
+    <div>
+      <NavbarFotos />
       <ContenidoParaArtistas /> {/* Cambiado de Videos */}
       <ContenidoParaEmpresas />
       <Discografia /> {/* Cambiado de Discografia */}
